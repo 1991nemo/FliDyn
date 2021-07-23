@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeSolver", "FliDynModule\OdeSolver.csproj", "{A2A26734-03BD-41C8-8845-1FA07CD5CF2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightDynamics", "FlightDynamics\FlightDynamics.csproj", "{47A92831-28F2-418A-966E-D588CE3D042B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2A26734-03BD-41C8-8845-1FA07CD5CF2B} = {A2A26734-03BD-41C8-8845-1FA07CD5CF2B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AircraftSimulation", "OdeExample\AircraftSimulation.csproj", "{266657A6-21D7-4818-9BC5-FBA3C5D8A869}"
+	ProjectSection(ProjectDependencies) = postProject
+		{47A92831-28F2-418A-966E-D588CE3D042B} = {47A92831-28F2-418A-966E-D588CE3D042B}
+		{A2A26734-03BD-41C8-8845-1FA07CD5CF2B} = {A2A26734-03BD-41C8-8845-1FA07CD5CF2B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2A26734-03BD-41C8-8845-1FA07CD5CF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A26734-03BD-41C8-8845-1FA07CD5CF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A26734-03BD-41C8-8845-1FA07CD5CF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A26734-03BD-41C8-8845-1FA07CD5CF2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A92831-28F2-418A-966E-D588CE3D042B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A92831-28F2-418A-966E-D588CE3D042B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A92831-28F2-418A-966E-D588CE3D042B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{47A92831-28F2-418A-966E-D588CE3D042B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A92831-28F2-418A-966E-D588CE3D042B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266657A6-21D7-4818-9BC5-FBA3C5D8A869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266657A6-21D7-4818-9BC5-FBA3C5D8A869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266657A6-21D7-4818-9BC5-FBA3C5D8A869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266657A6-21D7-4818-9BC5-FBA3C5D8A869}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
